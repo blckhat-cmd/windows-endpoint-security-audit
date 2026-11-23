@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html><html><head><meta charset="utf-8"><title>Endpoint Security Assessment Report</title><style>*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#1F2A37;margin:0;line-height:1.45}
+h1{font-size:19px;color:#10294B;margin:0 0 8px;page-break-after:avoid}
+h2{font-size:14px;color:#10294B;margin:16px 0 6px;page-break-after:avoid}
+p{margin:0 0 8px}
+.sec{margin-top:7mm}
+.cover{page:cover;height:296mm;position:relative}
+.ctop{background:#10294B;height:172mm;padding:34mm 16mm 0 16mm;color:#fff}
+.ctag{font-size:9.5px;font-weight:bold;letter-spacing:1.5px;color:#9FB3CF;margin-bottom:12mm}
+.ctitle{font-size:34px;font-weight:bold;line-height:1.2;margin-bottom:6mm}
+.csub{font-size:13px;color:#CFDAEA}
+.cstripe{height:2mm;background:#2F6DB5}
+.cbody{padding:10mm 16mm 0 16mm}
+.clogo{margin-bottom:6mm}
+.logo{height:20mm}
+.crow{display:flex;border-bottom:1px solid #D5DBE5;padding:9px 0}
+.crow .l{width:42mm;font-size:10px;color:#6B7A90;letter-spacing:.5px}
+.crow .v{font-size:12px;font-weight:bold;color:#10294B}
+.cnote{font-size:9px;color:#6B7A90;margin-top:12mm}
+.stats{display:flex;gap:10px;margin:10px 0 14px}
+.stat{flex:1;background:#F3F5F8;border-top:4px solid #10294B;text-align:center;padding:12px 4px}
+.stat b{display:block;font-size:28px;line-height:1.1;color:#10294B}
+.stat span{font-size:8.5px;letter-spacing:1px;color:#5B6B80;font-weight:bold}
+.stat.c{border-top-color:#8B0000}.stat.c b{color:#8B0000}
+.stat.h{border-top-color:#C62828}.stat.h b{color:#C62828}
+.stat.m{border-top-color:#E67E00}.stat.m b{color:#E67E00}
+.stat.l{border-top-color:#2F6DB5}.stat.l b{color:#2F6DB5}
+table.t{border-collapse:collapse;width:100%;margin:6px 0 10px;font-size:10px}
+table.t th{background:#10294B;color:#fff;text-align:left;padding:7px 8px;font-size:10px}
+table.t td{padding:6px 8px;border-bottom:1px solid #E1E6EE;vertical-align:top}
+table.t tr:nth-child(even) td{background:#F6F8FB}
+table.t tr{page-break-inside:avoid}
+table.t td.id{font-weight:bold;white-space:nowrap}
+table.t td.nm{font-weight:bold}
+table.fd th:nth-child(1){width:9%}
+table.fd th:nth-child(2){width:17%}
+table.fd th:nth-child(3){width:11%}
+table.fd th:nth-child(5){width:24%}
+table.fd tr.sCRITICAL td:first-child{border-left:4px solid #8B0000}
+table.fd tr.sHIGH td:first-child{border-left:4px solid #C62828}
+table.fd tr.sMEDIUM td:first-child{border-left:4px solid #E67E00}
+table.fd tr.sLOW td:first-child{border-left:4px solid #2F6DB5}
+.pill{display:inline-block;color:#fff;font-weight:bold;font-size:8px;letter-spacing:.5px;padding:4px 0;width:58px;text-align:center;border-radius:2px}
+.pill.CRITICAL{background:#8B0000}
+.pill.HIGH{background:#C62828}
+.pill.MEDIUM{background:#E67E00}
+.pill.LOW{background:#2F6DB5}
+.cnt{font-weight:bold}
+.cnt.CRITICAL{color:#8B0000}
+.cnt.HIGH{color:#C62828}
+.cnt.MEDIUM{color:#E67E00}
+.cnt.LOW{color:#2F6DB5}
+table.info{width:100%;border-collapse:collapse;background:#F3F5F8;border-left:4px solid #10294B;margin:8px 0 10px}
+table.info td{padding:6px 10px;font-size:10.5px;border:0}
+table.info td.l{font-weight:bold;width:17%}
+.note{font-size:9px;color:#5B6B80;margin:4px 0 8px}
+.key{display:flex;align-items:center;margin:5px 0}
+.key .pill{margin-right:10px}
+.ref{color:#2F6DB5;font-weight:bold;white-space:nowrap}
+.pocs{display:flex;flex-wrap:wrap;gap:8px}
+.poc{width:calc(50% - 4px);page-break-inside:avoid;break-inside:avoid}
+.poc.wide{width:100%}
+.ph{background:#2F6DB5;color:#fff;font-weight:bold;font-size:9px;padding:5px 8px}
+.poc pre{background:#10294B;color:#DCE6F2;margin:0;padding:8px;font-family:Consolas,"Courier New",monospace;font-size:8.5px;white-space:pre-wrap;word-break:break-word;line-height:1.4}
+@page cover{margin:0}@page{size:A4;margin:20mm 15mm 18mm 15mm;@top-left-corner{content:"";background:linear-gradient(to bottom,#10294B 0,#10294B 11mm,transparent 11mm)}@top-left{content:"Your Company Name  |  Endpoint Security Assessment Report";background:linear-gradient(to bottom,#10294B 0,#10294B 11mm,transparent 11mm);color:#fff;font-size:9px;font-weight:bold;vertical-align:top;padding-top:3.6mm;font-family:Arial,sans-serif}@top-center{content:"";background:linear-gradient(to bottom,#10294B 0,#10294B 11mm,transparent 11mm)}@top-right{content:"CONFIDENTIAL";background:linear-gradient(to bottom,#10294B 0,#10294B 11mm,transparent 11mm);color:#C9D6EA;font-size:9px;text-align:right;vertical-align:top;padding-top:3.6mm;font-family:Arial,sans-serif}@top-right-corner{content:"";background:linear-gradient(to bottom,#10294B 0,#10294B 11mm,transparent 11mm)}@bottom-left{content:"Prepared by Your Company Name";font-size:9px;color:#5B7BA6;border-top:0.5pt solid #C8D0DC;padding-top:4px;width:50%;font-family:Arial,sans-serif}@bottom-right{content:"Page " counter(page);font-size:9px;color:#5B7BA6;text-align:right;border-top:0.5pt solid #C8D0DC;padding-top:4px;width:50%;font-family:Arial,sans-serif}}@page cover{@top-left{content:none}}</style></head><body>
+<div class="cover">
+<div class="ctop"><div class="ctag">VAPT &nbsp;|&nbsp; ENDPOINT AUDIT</div><div class="ctitle">Endpoint Security<br>Assessment Report</div><div class="csub">Windows endpoint vulnerability assessment &ndash; 1 device</div></div>
+<div class="cstripe"></div>
+<div class="cbody">
+<div class="crow"><div class="l">CLIENT</div><div class="v">sample (10.0.0.15, 192.168.1.42)</div></div>
+<div class="crow"><div class="l">REPORT DATE</div><div class="v">23 November 2026</div></div>
+<div class="crow"><div class="l">ASSESSMENT DATE</div><div class="v">23 November 2026</div></div>
+<div class="crow"><div class="l">PREPARED BY</div><div class="v">Your Company Name</div></div>
+<div class="crow"><div class="l">CLASSIFICATION</div><div class="v">Confidential</div></div>
+<div class="cnote">This report is confidential and intended only for the recipient named above.</div>
+</div></div>
+<div class="sec"><h1>1. Executive Summary</h1>
+<p>One Windows endpoint (DEMO-LAPTOP (sample), 10.0.0.15, 192.168.1.42) was assessed on 23 November 2026. A total of <b>25 issues</b> were found: <b>4 High</b>, <b>5 Medium</b>, <b>16 Low</b>. Fix Critical and High issues first. The Critical and High issues are: BitLocker (disk encryption); Firewall inbound allow rules; Remote access tools; Software with known security flaws.</p>
+<div class="stats"><div class="stat"><b>25</b><span>TOTAL ISSUES</span></div><div class="stat c"><b>0</b><span>CRITICAL</span></div><div class="stat h"><b>4</b><span>HIGH</span></div><div class="stat m"><b>5</b><span>MEDIUM</span></div><div class="stat l"><b>16</b><span>LOW</span></div></div>
+</div>
+<div class="sec"><h1>2. Scope and Results by Endpoint</h1>
+<table class="t"><tr><th>Endpoint</th><th>IP Address</th><th>Operating System</th><th>Critical</th><th>High</th><th>Medium</th><th>Low</th><th>Total</th></tr>
+<tr><td class="nm">DEMO-LAPTOP (sample)</td><td>10.0.0.15, 192.168.1.42</td><td>Windows 11 Pro (build 26300)</td><td class="cnt CRITICAL">0</td><td class="cnt HIGH">4</td><td class="cnt MEDIUM">5</td><td class="cnt LOW">16</td><td class="nm">25</td></tr>
+</table>
+<div class="note"><b>Note:</b> Severity is rated by the impact of the issue on that endpoint. Every issue is shown with its proof (PoC).</div>
+<h2>Severity key</h2>
+<div class="key"><span class="pill CRITICAL">CRITICAL</span> Active attack signs, or a weakness that gives full control at once. Fix immediately.</div>
+<div class="key"><span class="pill HIGH">HIGH</span> Can lead to data theft, system takeover or loss. Fix first.</div>
+<div class="key"><span class="pill MEDIUM">MEDIUM</span> Weakens security or helps an attacker. Fix after High issues.</div>
+<div class="key"><span class="pill LOW">LOW</span> Small risk or best-practice gap. Fix when convenient.</div>
+</div>
+<div class="sec"><h1>3. Summary of All Findings</h1>
+<table class="t"><tr><th>No.</th><th>Device</th><th>Issue</th><th>Severity</th></tr>
+<tr><td class="id">EP-01</td><td>DEMO-LAPTOP (sample)</td><td>BitLocker (disk encryption)</td><td><span class="pill HIGH">HIGH</span></td></tr>
+<tr><td class="id">EP-02</td><td>DEMO-LAPTOP (sample)</td><td>Firewall inbound allow rules</td><td><span class="pill HIGH">HIGH</span></td></tr>
+<tr><td class="id">EP-03</td><td>DEMO-LAPTOP (sample)</td><td>Remote access tools</td><td><span class="pill HIGH">HIGH</span></td></tr>
+<tr><td class="id">EP-04</td><td>DEMO-LAPTOP (sample)</td><td>Software with known security flaws</td><td><span class="pill HIGH">HIGH</span></td></tr>
+<tr><td class="id">EP-05</td><td>DEMO-LAPTOP (sample)</td><td>Outdated applications (needs internet)</td><td><span class="pill MEDIUM">MEDIUM</span></td></tr>
+<tr><td class="id">EP-06</td><td>DEMO-LAPTOP (sample)</td><td>Password policy</td><td><span class="pill MEDIUM">MEDIUM</span></td></tr>
+<tr><td class="id">EP-07</td><td>DEMO-LAPTOP (sample)</td><td>SMB settings</td><td><span class="pill MEDIUM">MEDIUM</span></td></tr>
+<tr><td class="id">EP-08</td><td>DEMO-LAPTOP (sample)</td><td>LLMNR and NetBIOS</td><td><span class="pill MEDIUM">MEDIUM</span></td></tr>
+<tr><td class="id">EP-09</td><td>DEMO-LAPTOP (sample)</td><td>End-of-life software</td><td><span class="pill MEDIUM">MEDIUM</span></td></tr>
+<tr><td class="id">EP-10</td><td>DEMO-LAPTOP (sample)</td><td>Defender hardening (exclusions, cloud, PUA, ASR)</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-11</td><td>DEMO-LAPTOP (sample)</td><td>EDR agent</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-12</td><td>DEMO-LAPTOP (sample)</td><td>Secure Boot and TPM</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-13</td><td>DEMO-LAPTOP (sample)</td><td>USB storage</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-14</td><td>DEMO-LAPTOP (sample)</td><td>Local user accounts</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-15</td><td>DEMO-LAPTOP (sample)</td><td>Screen lock (inactivity)</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-16</td><td>DEMO-LAPTOP (sample)</td><td>Scheduled tasks (non-Microsoft)</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-17</td><td>DEMO-LAPTOP (sample)</td><td>Services (unsafe paths)</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-18</td><td>DEMO-LAPTOP (sample)</td><td>Event log size and audit policy</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-19</td><td>DEMO-LAPTOP (sample)</td><td>PowerShell and command-line logging</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-20</td><td>DEMO-LAPTOP (sample)</td><td>Browser extensions (Chrome and Edge)</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-21</td><td>DEMO-LAPTOP (sample)</td><td>Saved Wi-Fi networks</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-22</td><td>DEMO-LAPTOP (sample)</td><td>SmartScreen and ransomware protection</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-23</td><td>DEMO-LAPTOP (sample)</td><td>Memory protections (HVCI and DEP)</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-24</td><td>DEMO-LAPTOP (sample)</td><td>Remote Assistance</td><td><span class="pill LOW">LOW</span></td></tr>
+<tr><td class="id">EP-25</td><td>DEMO-LAPTOP (sample)</td><td>Files that may hold passwords (names only)</td><td><span class="pill LOW">LOW</span></td></tr>
+</table>
+</div>
+<div class="sec"><h1>Endpoint: DEMO-LAPTOP (sample)</h1>
+<table class="info"><tr><td class="l">IP Address</td><td>10.0.0.15, 192.168.1.42</td><td class="l">Operating System</td><td>Windows 11 Pro (build 26300)</td></tr><tr><td class="l">Model</td><td>Generic OEM Laptop (sample hardware)</td><td class="l">Issues Found</td><td><b>25</b> (<b class="cnt HIGH">4 High</b>, <b class="cnt MEDIUM">5 Medium</b>, <b class="cnt LOW">16 Low</b>)</td></tr></table>
+<table class="t fd"><tr><th>No.</th><th>Finding</th><th>Severity</th><th>Description</th><th>Recommendation</th></tr>
+<tr class="sHIGH"><td class="id">EP-01</td><td class="nm">BitLocker (disk encryption)</td><td><span class="pill HIGH">HIGH</span></td><td>The Windows drive is not fully encrypted or protection is off. (Third-party disk encryption, if any, cannot be detected by this script.) <span class="ref">[PoC-1]</span></td><td>Turn on BitLocker for the Windows drive and save the recovery key safely.</td></tr>
+<tr class="sHIGH"><td class="id">EP-02</td><td class="nm">Firewall inbound allow rules</td><td><span class="pill HIGH">HIGH</span></td><td>1 inbound allow rule(s) are too open (allow everything, or open a risky port to any address on the Public profile). <span class="ref">[PoC-2]</span></td><td>Delete or narrow these rules. Allow only the needed ports and only from trusted IP addresses.</td></tr>
+<tr class="sHIGH"><td class="id">EP-03</td><td class="nm">Remote access tools</td><td><span class="pill HIGH">HIGH</span></td><td>Remote access tool(s) found: UltraVNC. <span class="ref">[PoC-3]</span></td><td>Remove the tool if it is not approved. If approved, use strong authentication, limit who can connect, and keep it updated.</td></tr>
+<tr class="sHIGH"><td class="id">EP-04</td><td class="nm">Software with known security flaws</td><td><span class="pill HIGH">HIGH</span></td><td>1 installed program(s) are older than the version that fixes known security flaws (WinRAR, 7-Zip, PuTTY). <span class="ref">[PoC-4]</span></td><td>Update these programs to the latest version.</td></tr>
+<tr class="sMEDIUM"><td class="id">EP-05</td><td class="nm">Outdated applications (needs internet)</td><td><span class="pill MEDIUM">MEDIUM</span></td><td>18 app(s) are outdated, including important ones (browsers, Java, Adobe, Office, archive tools, etc.). <span class="ref">[PoC-5]</span></td><td>Update the listed applications.</td></tr>
+<tr class="sMEDIUM"><td class="id">EP-06</td><td class="nm">Password policy</td><td><span class="pill MEDIUM">MEDIUM</span></td><td>Minimum password length is 0 (should be 8 or more). Password complexity is off (and the minimum length is below 14). <span class="ref">[PoC-6]</span></td><td>Set minimum length 8+ (12+ is better), turn on complexity, and lock accounts after 5-10 wrong tries.</td></tr>
+<tr class="sMEDIUM"><td class="id">EP-07</td><td class="nm">SMB settings</td><td><span class="pill MEDIUM">MEDIUM</span></td><td>SMB signing is not required on the server side. SMB signing is not required on the client side. <span class="ref">[PoC-7]</span></td><td>Turn off SMB1. Require SMB signing after testing that it works with the client network.</td></tr>
+<tr class="sMEDIUM"><td class="id">EP-08</td><td class="nm">LLMNR and NetBIOS</td><td><span class="pill MEDIUM">MEDIUM</span></td><td>LLMNR is not disabled. NetBIOS over TCP/IP is on for at least one network adapter. <span class="ref">[PoC-8]</span></td><td>Disable LLMNR by policy and turn off NetBIOS over TCP/IP (they help attackers steal password hashes on the local network).</td></tr>
+<tr class="sMEDIUM"><td class="id">EP-09</td><td class="nm">End-of-life software</td><td><span class="pill MEDIUM">MEDIUM</span></td><td>1 installed program(s) no longer get security updates: Microsoft Office Home and Student 2021 - en-us. <span class="ref">[PoC-9]</span></td><td>Upgrade to a supported version, or remove the software.</td></tr>
+<tr class="sLOW"><td class="id">EP-10</td><td class="nm">Defender hardening (exclusions, cloud, PUA, ASR)</td><td><span class="pill LOW">LOW</span></td><td>Network protection is not enforced. No Attack Surface Reduction rules are set. <span class="ref">[PoC-10]</span></td><td>In Windows Security (or Defender policy): remove wide exclusions, turn on cloud protection, PUA, network protection, tamper protection and ASR rules.</td></tr>
+<tr class="sLOW"><td class="id">EP-11</td><td class="nm">EDR agent</td><td><span class="pill LOW">LOW</span></td><td>No running EDR agent found (normal antivirus is not EDR). <span class="ref">[PoC-11]</span></td><td>Install and onboard an EDR agent if the client policy requires it.</td></tr>
+<tr class="sLOW"><td class="id">EP-12</td><td class="nm">Secure Boot and TPM</td><td><span class="pill LOW">LOW</span></td><td>Secure Boot is off or not supported. <span class="ref">[PoC-12]</span></td><td>Turn on Secure Boot (UEFI) and TPM in the BIOS settings if the hardware supports them.</td></tr>
+<tr class="sLOW"><td class="id">EP-13</td><td class="nm">USB storage</td><td><span class="pill LOW">LOW</span></td><td>USB storage is allowed. <span class="ref">[PoC-13]</span></td><td>Block USB storage by policy if the client does not need it.</td></tr>
+<tr class="sLOW"><td class="id">EP-14</td><td class="nm">Local user accounts</td><td><span class="pill LOW">LOW</span></td><td>Enabled account(s) where Windows does not require a password, so a blank password is allowed (a password was set earlier, so one may exist; this script cannot prove it is blank): User1. <span class="ref">[PoC-14]</span></td><td>Disable Guest and the built-in Administrator, disable unused accounts, and set a strong password on every account.</td></tr>
+<tr class="sLOW"><td class="id">EP-15</td><td class="nm">Screen lock (inactivity)</td><td><span class="pill LOW">LOW</span></td><td>No auto-lock (15 minutes or less) was found in policy or screen saver. (A lock set only in Power settings is not read by this script.) <span class="ref">[PoC-15]</span></td><td>Set an inactivity lock of 15 minutes or less by policy.</td></tr>
+<tr class="sLOW"><td class="id">EP-16</td><td class="nm">Scheduled tasks (non-Microsoft)</td><td><span class="pill LOW">LOW</span></td><td>Scheduled task(s) point to a file in a Temp/Public folder that no longer exists: SystemOptimizerTemp. <span class="ref">[PoC-16]</span></td><td>Delete the leftover tasks.</td></tr>
+<tr class="sLOW"><td class="id">EP-17</td><td class="nm">Services (unsafe paths)</td><td><span class="pill LOW">LOW</span></td><td>Unquoted service path(s) (not exploitable by normal users now): McAfee WebAdvisor. <span class="ref">[PoC-17]</span></td><td>Put service paths in quotes. Check services that run from user or temp folders.</td></tr>
+<tr class="sLOW"><td class="id">EP-18</td><td class="nm">Event log size and audit policy</td><td><span class="pill LOW">LOW</span></td><td>Security log is only 20 MB (100 MB or more is recommended). <span class="ref">[PoC-18]</span></td><td>Increase the Security log size and audit logon success and failure.</td></tr>
+<tr class="sLOW"><td class="id">EP-19</td><td class="nm">PowerShell and command-line logging</td><td><span class="pill LOW">LOW</span></td><td>PowerShell script block logging is off. Command-line logging for new processes is off. <span class="ref">[PoC-19]</span></td><td>Turn on script block logging and command-line logging by policy. They help investigate attacks.</td></tr>
+<tr class="sLOW"><td class="id">EP-20</td><td class="nm">Browser extensions (Chrome and Edge)</td><td><span class="pill LOW">LOW</span></td><td>Extension(s) can read all websites and also use powerful permissions (cookies, proxy, native apps): McAfee&#174; WebAdvisor (fheoggkfdfchfphceeifdbepaooicaho); FoxyProxy (flcnoalcefgkhkinjkffipfdhglnpnem). <span class="ref">[PoC-20]</span></td><td>Remove extensions that are not approved. Allow only needed extensions.</td></tr>
+<tr class="sLOW"><td class="id">EP-21</td><td class="nm">Saved Wi-Fi networks</td><td><span class="pill LOW">LOW</span></td><td>Saved open (no password) Wi-Fi network(s): HomeNet-5G, Neighbor-WiFi-2G. The PC may join them automatically. <span class="ref">[PoC-21]</span></td><td>Remove open Wi-Fi profiles. Use only protected networks.</td></tr>
+<tr class="sLOW"><td class="id">EP-22</td><td class="nm">SmartScreen and ransomware protection</td><td><span class="pill LOW">LOW</span></td><td>Controlled Folder Access (ransomware protection) is off. <span class="ref">[PoC-22]</span></td><td>Turn on SmartScreen and Controlled Folder Access in Windows Security.</td></tr>
+<tr class="sLOW"><td class="id">EP-23</td><td class="nm">Memory protections (HVCI and DEP)</td><td><span class="pill LOW">LOW</span></td><td>Memory integrity (HVCI) is not running. <span class="ref">[PoC-23]</span></td><td>Turn on Memory integrity in Windows Security &gt; Device security &gt; Core isolation. Keep DEP on.</td></tr>
+<tr class="sLOW"><td class="id">EP-24</td><td class="nm">Remote Assistance</td><td><span class="pill LOW">LOW</span></td><td>Windows Remote Assistance is allowed (invitation only). This is the Windows default. <span class="ref">[PoC-24]</span></td><td>Turn it off if it is not used.</td></tr>
+<tr class="sLOW"><td class="id">EP-25</td><td class="nm">Files that may hold passwords (names only)</td><td><span class="pill LOW">LOW</span></td><td>1 file(s) in Downloads, Desktop or Documents have names that suggest stored passwords. (File contents were NOT read.) <span class="ref">[PoC-25]</span></td><td>Keep passwords in a password manager, not in plain files. Delete these files after moving the passwords.</td></tr>
+</table>
+<div class="note"><b>Note:</b> Severity is rated by the impact of the issue on that endpoint. Every issue is shown with its proof (PoC).</div>
+<h2>Proof of Concept (key evidence from the scan)</h2>
+<div class="pocs">
+<div class="poc wide"><div class="ph">PoC-1 &nbsp;|&nbsp; EP-01 &nbsp;|&nbsp; BitLocker (disk encryption)</div><pre>MountPoint      VolumeType ProtectionStatus EncryptionPercentage   VolumeStatus
+----------      ---------- ---------------- --------------------   ------------
+C:         OperatingSystem              Off                    0 FullyDecrypted</pre></div>
+<div class="poc wide"><div class="ph">PoC-2 &nbsp;|&nbsp; EP-02 &nbsp;|&nbsp; Firewall inbound allow rules</div><pre>vnc5900  |  profile: Public  |  protocol: TCP  |  port: 5900  |  from: Any  |  program: Any</pre></div>
+<div class="poc wide"><div class="ph">PoC-3 &nbsp;|&nbsp; EP-03 &nbsp;|&nbsp; Remote access tools</div><pre>Installed program: UltraVNC   version: 1.6.4.0</pre></div>
+<div class="poc wide"><div class="ph">PoC-4 &nbsp;|&nbsp; EP-04 &nbsp;|&nbsp; Software with known security flaws</div><pre>WinRAR 7.01 (64-bit)   installed 7.01.0   fixed in 7.13   CVE-2025-6218 and CVE-2025-8088 (file extraction flaws, actively attacked)</pre></div>
+<div class="poc wide"><div class="ph">PoC-5 &nbsp;|&nbsp; EP-05 &nbsp;|&nbsp; Outdated applications (needs internet)</div><pre>Installed version  -&gt;  available version
+Claude   5.11492.5.0  -&gt;  6.28899.6
+Epic Games Launcher   1.3.161.0  -&gt;  1.3.210.0
+Epic Online Services   4.1.0  -&gt;  4.3.1
+Google Chrome   157.0.8103.79  -&gt;  158.0.8127.37
+HP Connection Optimizer   2.0.20.0  -&gt;  2.0.22
+Microsoft GameInput   4.0.306.0  -&gt;  4.1.314
+Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.30501   12.0.30501.0  -&gt;  12.0.40664.0
+Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.30501   12.0.30501.0  -&gt;  12.0.40664.0
+Microsoft Visual C++ v14 Redistributable (x64) - 14.51.36247   14.51.36247.0  -&gt;  14.52.37029.0
+Microsoft Visual C++ v14 Redistributable (x86) - 14.51.36247   14.51.36247.0  -&gt;  14.52.37029.0
+Microsoft Windows Desktop Runtime - 6.0.10 (x64)   6.0.10  -&gt;  6.0.36
+NVIDIA PhysX System Software 9.21.0713   9.21.0713  -&gt;  9.26.0703
+Proton VPN   5.1.9  -&gt;  5.1.10
+SQLyog Community 13.0.1 (64 bit)   &lt; 13.3.0  -&gt;  13.3.0
+Ubisoft Connect   &lt; 175.2.0.13423  -&gt;  175.2.0.13423
+UltraVNC   1.6.4.0  -&gt;  1.8.3.2
+WinRAR 7.01 (64-bit)   7.01.0  -&gt;  7.23.0
+... (1 more lines not shown)</pre></div>
+<div class="poc wide"><div class="ph">PoC-6 &nbsp;|&nbsp; EP-06 &nbsp;|&nbsp; Password policy</div><pre>Minimum password length : 0
+Lockout after bad attempts : 10   (0 = never locks)
+Password complexity : 0   (1 = on)
+Maximum password age (days) : 42   (-1 = never expires)
+
+Policy as seen on this PC (Workgroup: WORKGROUP).</pre></div>
+<div class="poc"><div class="ph">PoC-7 &nbsp;|&nbsp; EP-07 &nbsp;|&nbsp; SMB settings</div><pre>SERVER
+EnableSMB1Protocol       : False
+EnableSMB2Protocol       : True
+RequireSecuritySignature : False
+EnableSecuritySignature  : False
+
+CLIENT
+RequireSecuritySignature : False
+EnableSecuritySignature  : True</pre></div>
+<div class="poc wide"><div class="ph">PoC-8 &nbsp;|&nbsp; EP-08 &nbsp;|&nbsp; LLMNR and NetBIOS</div><pre>LLMNR policy (EnableMulticast) = not set (LLMNR is ON by default)
+NetBIOS over TCP/IP is not disabled on:
+Description                                   TcpipNetbiosOptions
+-----------                                   -------------------
+MediaTek MT7921 Wi-Fi 6 802.11ax PCIe Adapter                   0</pre></div>
+<div class="poc wide"><div class="ph">PoC-9 &nbsp;|&nbsp; EP-09 &nbsp;|&nbsp; End-of-life software</div><pre>Microsoft Office Home and Student 2021 - en-us   16.0.20527.20196   - support ended 13 Oct 2026</pre></div>
+<div class="poc wide"><div class="ph">PoC-10 &nbsp;|&nbsp; EP-10 &nbsp;|&nbsp; Defender hardening (exclusions, cloud, PUA, ASR)</div><pre>Cloud protection (MAPSReporting) = 2   (0 = off)
+PUA protection = 1   (1 = on)
+Network protection = 0   (1 = on)
+ASR rules configured = 0
+Tamper protection = True
+Antivirus mode = Normal
+
+Excluded paths: (none)
+Excluded extensions: (none)
+Excluded processes: (none)</pre></div>
+<div class="poc wide"><div class="ph">PoC-11 &nbsp;|&nbsp; EP-11 &nbsp;|&nbsp; EDR agent</div><pre>Defender for Endpoint onboarding state = not set (1 = onboarded)
+
+EDR-type services found:
+Name  DisplayName                                          Status
+----  -----------                                          ------
+Sense Windows Defender Advanced Threat Protection Service Stopped</pre></div>
+<div class="poc wide"><div class="ph">PoC-12 &nbsp;|&nbsp; EP-12 &nbsp;|&nbsp; Secure Boot and TPM</div><pre>Secure Boot enabled: False   (empty = not supported or the PC uses legacy BIOS)
+TPM present: True
+TPM ready: True</pre></div>
+<div class="poc wide"><div class="ph">PoC-13 &nbsp;|&nbsp; EP-13 &nbsp;|&nbsp; USB storage</div><pre>USBSTOR Start = 3   (3 = USB storage allowed, 4 = blocked)</pre></div>
+<div class="poc wide"><div class="ph">PoC-14 &nbsp;|&nbsp; EP-14 &nbsp;|&nbsp; Local user accounts</div><pre>Name Enabled PasswordRequired PasswordLastSet    
+---- ------- ---------------- ---------------    
+User1   True            False 27-03-2025 19:24:41</pre></div>
+<div class="poc wide"><div class="ph">PoC-15 &nbsp;|&nbsp; EP-15 &nbsp;|&nbsp; Screen lock (inactivity)</div><pre>Machine inactivity limit (policy) = not set (seconds)
+Screen saver active = 1, password on resume = not set, timeout = not set (seconds)
+(Screen saver values are for the user running this script.)</pre></div>
+<div class="poc wide"><div class="ph">PoC-16 &nbsp;|&nbsp; EP-16 &nbsp;|&nbsp; Scheduled tasks (non-Microsoft)</div><pre>SystemOptimizerTemp  -&gt;  C:\Users\User1\AppData\Local\Temp\HP\SystemOptimizerTemp\SystemOptimizer.exe -update   [file not found on disk]</pre></div>
+<div class="poc wide"><div class="ph">PoC-17 &nbsp;|&nbsp; EP-17 &nbsp;|&nbsp; Services (unsafe paths)</div><pre>McAfee WebAdvisor  -&gt;  C:\Program Files\McAfee\WebAdvisor\ServiceHost.exe</pre></div>
+<div class="poc wide"><div class="ph">PoC-18 &nbsp;|&nbsp; EP-18 &nbsp;|&nbsp; Event log size and audit policy</div><pre>Security log maximum size: 20 MB (retention mode: Circular)
+
+Audit policy:
+Audit                   Setting            
+-----                   -------            
+Logon                   Success and Failure
+Account Lockout         Success            
+Process Creation        No Auditing        
+User Account Management Success</pre></div>
+<div class="poc wide"><div class="ph">PoC-19 &nbsp;|&nbsp; EP-19 &nbsp;|&nbsp; PowerShell and command-line logging</div><pre>PowerShell script block logging = not set (1 = on)
+Command line in process-creation events = not set (1 = on)</pre></div>
+<div class="poc wide"><div class="ph">PoC-20 &nbsp;|&nbsp; EP-20 &nbsp;|&nbsp; Browser extensions (Chrome and Edge)</div><pre>Browser Extension          Id                               Version   
+------- ---------          --                               -------   
+Chrome  McAfee&#174; WebAdvisor fheoggkfdfchfphceeifdbepaooicaho 8.2.0.1353
+Edge    FoxyProxy          flcnoalcefgkhkinjkffipfdhglnpnem 9.7</pre></div>
+<div class="poc wide"><div class="ph">PoC-21 &nbsp;|&nbsp; EP-21 &nbsp;|&nbsp; Saved Wi-Fi networks</div><pre>HomeNet-5G   (security: Open, no password)
+Neighbor-WiFi-2G   (security: Open, no password)</pre></div>
+<div class="poc wide"><div class="ph">PoC-22 &nbsp;|&nbsp; EP-22 &nbsp;|&nbsp; SmartScreen and ransomware protection</div><pre>SmartScreenEnabled = not set (Off = bad)
+SmartScreen policy (EnableSmartScreen) = not set (0 = off)
+Controlled Folder Access = 0   (1 = on, 2 = audit, 0 = off)</pre></div>
+<div class="poc wide"><div class="ph">PoC-23 &nbsp;|&nbsp; EP-23 &nbsp;|&nbsp; Memory protections (HVCI and DEP)</div><pre>Memory integrity (HVCI) running: False
+Virtualization-based security status = 0   (2 = running)
+DEP policy = 3   (0 = off, 1 = all on, 2 = Windows only, 3 = opt-out)</pre></div>
+<div class="poc wide"><div class="ph">PoC-24 &nbsp;|&nbsp; EP-24 &nbsp;|&nbsp; Remote Assistance</div><pre>fAllowToGetHelp = 1   (1 = Remote Assistance allowed, needs an invitation from the user)
+fAllowUnsolicited (Offer Remote Assistance policy) = not set (1 = a helper can connect without an invitation)</pre></div>
+<div class="poc wide"><div class="ph">PoC-25 &nbsp;|&nbsp; EP-25 &nbsp;|&nbsp; Files that may hold passwords (names only)</div><pre>C:\Users\User1\Documents\old_passwords_backup.docx</pre></div>
+</div>
+</div></body></html>
